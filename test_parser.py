@@ -20,14 +20,12 @@ def test_get_basic_packet_parameters_with_bad_pcap_file(bad_pacp_file='bad.pcap'
     bad_pacp_file = pyshark.FileCapture(bad_pacp_file)
     for pkt in bad_pacp_file:
         result = get_basic_packet_parameters(pkt)
-    assert result
 
 
 def test_get_basic_packet_parameters_with_goodpcap_file(good_pacp_file='good.pcap'):
     good_pacp_file = pyshark.FileCapture(good_pacp_file)
     for pkt in good_pacp_file:
         result = get_basic_packet_parameters(pkt)
-    assert result
 
 
 # api_request_to_virus_total tests
